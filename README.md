@@ -1,78 +1,65 @@
-# Deep-Learning-Assignment2
-CNN + RNN + GAN (Applied Deep Models)
+Deep Learning Assignment 2:
+CNN, RNN, and GAN (Applied Models)
 
-This project implements core deep learning models using PyTorch, covering image classification, sequence learning, and generative modeling.
+This project focuses on implementing important deep learning architectures using PyTorch. It covers three main areas: image classification, sequence prediction, and image generation.
 
----
+Models Developed
+1. Convolutional Neural Network (CNN) – Image Classification
+Dataset Used: Fashion-MNIST
+Designed a custom CNN architecture including:
+Convolutional layers
+ReLU activation
+Pooling layers
+Dropout for regularization
+Also applied transfer learning using a pretrained ResNet18 model
+Results:
+Achieved around 91% accuracy
+Generated a confusion matrix
+Plotted training loss curves
+2. Recurrent Neural Network (RNN) – Time Series Forecasting
+Dataset Used: Artificial sine wave data
+Implemented and compared three models:
+Basic RNN
+LSTM (Long Short-Term Memory)
+GRU (Gated Recurrent Unit)
+Results:
+Compared models using RMSE (Root Mean Square Error)
+Visualized training loss for each model
+3. Generative Adversarial Network (GAN) – Image Generation
+Dataset Used: Fashion-MNIST
+Built two main components:
+Generator (creates images)
+Discriminator (evaluates images)
+Used alternating training strategy (training discriminator and generator step-by-step)
+Results:
+Generated sample images
+Displayed training loss graphs
+Performance Summary
+CNN Accuracy: ~91%
+RNN RMSE: 0.0370 (best performing model)
+LSTM RMSE: 0.1052
+GRU RMSE: 0.1097
+GAN: Generated images improved gradually over training epochs
+Requirements
 
-## Models Implemented
+Install the required libraries using:
 
-### 1. CNN (Image Classification)
-- Dataset: Fashion-MNIST
-- Custom CNN with Conv + ReLU + Pooling + Dropout
-- Transfer Learning using ResNet18
-- Output: Accuracy (~91%), confusion matrix, loss curve
-
-### 2. RNN (Time-Series Prediction)
-- Dataset: Synthetic sine wave
-- Models:
-  - RNN
-  - LSTM
-  - GRU
-- Output: RMSE comparison and loss curves
-
-### 3. GAN (Image Generation)
-- Dataset: Fashion-MNIST
-- Generator + Discriminator architecture
-- Alternating training (D then G)
-- Output: Generated images and loss graphs
-
----
-
-## Results Summary
-
-- CNN Accuracy: ~91%
-- RNN RMSE: 0.0370 (Best)
-- LSTM RMSE: 0.1052
-- GRU RMSE: 0.1097
-- GAN: Generated images showing progressive improvement
-
----
-
-## Requirements
-
-Install the following libraries:
 pip install torch torchvision matplotlib scikit-learn
+Execution Steps
+Clone or download the project repository
+Open the project directory
 
----
+Start Jupyter Notebook:
 
-## How to Run
-
-1. Download or clone the repository:
-   git clone <your-repo-link>
-
-2. Open the project folder.
-
-3. Launch Jupyter Notebook:
-   jupyter notebook
-
-4. Open the `.ipynb` file.
-
-5. Run all cells sequentially:
-   Kernel → Restart & Run All
-   
----
-
-## Outputs Included
-
-- CNN accuracy and confusion matrix
-- Training loss curves (CNN, RNN, LSTM, GRU, GAN)
-- GAN generated images (`gan_images/` folder)
-- Model comparison results
-
----
-
-## Notes
-
-- ResNet18 is used as a pretrained model and not fully trained due to CPU limitations.
-- GAN training is limited to few epochs for faster execution.
+jupyter notebook
+Open the .ipynb file
+Run all cells in order:
+Go to Kernel → Restart & Run All
+Generated Outputs
+CNN accuracy results and confusion matrix
+Loss curves for CNN, RNN, LSTM, GRU, and GAN
+Generated images stored in the gan_images/ folder
+Comparative performance results
+Additional Notes
+The ResNet18 model is used in pretrained mode and not fully fine-tuned due to limited CPU resources
+GAN training is kept short (few epochs) to ensure faster execution
